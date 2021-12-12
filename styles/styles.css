@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* root colors */
+:root {
+  --main-color: #f44336;
+}
+/* header styles */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(../images/banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+}
+
+nav img {
+  width: 150px;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 14px;
+  position: relative;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+/* so here i am adding a content after links and i just want to show then on hover on my link */
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  display: block;
+  margin: auto;
+  height: 2px;
+  background-color: var(--main-color);
+  transition: 0.6s;
+  /* transform: scale(0); */
+  transform-origin: left;
+}
+.nav-links ul li:hover::after {
+  /* transform: scale(1); */
+  width: 100%;
+}
+.text-box {
+  width: 100%;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text-box h1 {
+  font-size: 4rem;
+}
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 0.9rem;
+}
+.hero-btn {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  position: relative;
+  transition: 1s;
+}
+.hero-btn:hover {
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color);
+}
+nav .fas {
+  display: none;
+}
+
+/* media queries for responsive */
+@media only screen and (max-width: 700px) {
+  .text-box h1 {
+    font-size: 20px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    text-align: left;
+    z-index: 2;
+  }
+  .nav-links ul {
+    padding: 1.9rem;
+  }
+  nav .fas {
+    display: block;
+    font-size: 1.4rem;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+  }
+}
