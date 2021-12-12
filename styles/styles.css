@@ -55,9 +55,8 @@ nav ul li a {
   margin: auto;
   height: 2px;
   background-color: var(--main-color);
-  transition: 0.6s;
+  transition: 0.5s;
   /* transform: scale(0); */
-  transform-origin: left;
 }
 .nav-links ul li:hover::after {
   /* transform: scale(1); */
@@ -239,6 +238,42 @@ p {
 .testimonials-col .fas {
   color: var(--main-color);
 }
+
+/* call to action styles */
+.cta {
+  margin: 6.2rem auto;
+  width: 80%;
+  padding: 6rem 0;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/banner2.jpg);
+  border-radius: 10px;
+}
+.cta h1 {
+  color: white;
+  margin-bottom: 14px;
+}
+footer {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+}
+footer h4 {
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+.icons {
+  margin: 8px 0;
+}
+.icons .fab {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0 12px;
+  color: var(--main-color);
+}
+.fa-heart {
+  color: var(--main-color);
+}
 /* media queries for responsive */
 @media only screen and (max-width: 768px) {
   body {
@@ -282,5 +317,8 @@ p {
     border-radius: 50%;
     margin-right: 0.9rem;
     margin-left: 0.25rem;
+  }
+  .cta h1 {
+    font-size: 1.3rem;
   }
 }
