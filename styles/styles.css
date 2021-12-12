@@ -179,6 +179,25 @@ p {
   bottom: 49%;
   opacity: 1;
 }
+/* facilities styles */
+.facilities {
+  width: 80%;
+  margin: 0 auto;
+  padding: 4.5rem 0;
+  text-align: center;
+}
+.facilities-col {
+  flex-basis: 27%;
+  text-align: left;
+
+}
+.facilities-col p {
+  padding-left: 0;
+}
+.facilities-col img {
+  width: 100%;
+  border-radius: 10px;
+}
 /* media queries for responsive */
 @media only screen and (max-width: 768px) {
   body {
